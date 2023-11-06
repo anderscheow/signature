@@ -437,14 +437,14 @@ class SignatureController extends ValueNotifier<List<Point>> {
       canvas.drawPaint(paint);
     }
     if (width != null || height != null) {
-      assert(
-        ((width ?? defaultWidth!) - defaultWidth!) >= 0.0,
-        'Exported width cannot be smaller than actual width',
-      );
-      assert(
-        ((height ?? defaultHeight!) - defaultHeight!) >= 0.0,
-        'Exported height cannot be smaller than actual height',
-      );
+      // assert(
+      //   ((width ?? defaultWidth!) - defaultWidth!) >= 0.0,
+      //   'Exported width cannot be smaller than actual width',
+      // );
+      // assert(
+      //   ((height ?? defaultHeight!) - defaultHeight!) >= 0.0,
+      //   'Exported height cannot be smaller than actual height',
+      // );
       //IF WIDTH OR HEIGHT IS SPECIFIED WE NEED TO CENTER DRAWING
       //WE WILL MOVE THE DRAWING BY HALF OF THE REMAINING SPACE IF
       //IF DIMENSION IS NOT SPECIFIED WE WILL DEFAULT TO ACTUAL
@@ -490,16 +490,16 @@ class SignatureController extends ValueNotifier<List<Point>> {
       return null;
     }
 
-    if (width != null || height != null) {
-      assert(
-        ((width ?? defaultWidth!) - defaultWidth!) >= 0.0,
-        'Exported width cannot be smaller than actual width',
-      );
-      assert(
-        ((height ?? defaultHeight!) - defaultHeight!) >= 0.0,
-        'Exported height cannot be smaller than actual height',
-      );
-    }
+    // if (width != null || height != null) {
+    //   assert(
+    //     ((width ?? defaultWidth!) - defaultWidth!) >= 0.0,
+    //     'Exported width cannot be smaller than actual width',
+    //   );
+    //   assert(
+    //     ((height ?? defaultHeight!) - defaultHeight!) >= 0.0,
+    //     'Exported height cannot be smaller than actual height',
+    //   );
+    // }
 
     final img.Color pColor = img.ColorRgb8(
       exportPenColor?.red ?? penColor.red,
